@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #800000;
+}
+
+
+.header, .footer {
+  background-color: #afeeee;
+  height: 10vh;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.img {
+  background-color: #d3d3d3;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+}
+.img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.img label {
+  width: 100%;
+}
+.img input {
+  display: none;
+}
+.resultArea {
+  height: 100%;
+}
+.showPic {
+  height: 100%;
+}
+
+.tab {
+  display: flex;
+  position: relative;
+  background-color: #e0ffff;
+  height: 10vh;
+}
+.tab div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.switch {
+  position: absolute;
+  border-radius: 5%;
+  height: 80%;
+  width: 44%;
+  left: 3%;
+  top: 10%;
+}
+.Switch_o {
+  background-color: lemonchiffon; 
+}
+.Switch_s {
+  background-color: #c0c0c0;
+  margin-left: 50%;
+}
+
+.result {
+  background-color: #ffffff;
+  height: 35vh;
+}
+.objectdata .table_object{
+  width: 94%;
+  height: 92%;
+  margin-left: 3%;
+  margin-top: 4%;
+  border: #800000 1px solid;
+  border-collapse: collapse;
+}
+.objectdata .table_object tr td {
+  text-align: center;
+  border-bottom: #800000 1px solid;
+  border-right: #800000 1px solid;
+  width: 50%;
+}
+
+.objectdata .table_object thead{
+  background-color: #c0c0c0;
+  color: #ffffff;
+} 
+
+.safesearch table {
+  height: 90%;
+  width: 80%;
+  margin: auto;
+  padding-top: 5%;
+}
+.safesearch thead, .safesearch tbody {
+  text-align: center;
+}
+ 
+
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+

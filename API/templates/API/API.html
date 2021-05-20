@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="{% static 'API/img/icon2.jpg' %}">
+  <link rel="stylesheet" href="{% static 'API/css/API.css' %}">
+  <title>Image Analysis</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <div class="header">
+      <b>image Analysis</b>
+    </div>
+
+
+    <div class="img" id="img">
+      <label for="uploader">
+        <!-- <div id="uploadArea"></div> -->
+        <input type="file" id="uploader">
+        <img src="" alt="" id="preview">
+        <!--- Google Cloud Vision APIに画像ファイルを送り、得られた結果を表示するエリア　--->
+        <!--- 初期状態ではクラス"hidden"を付与し、CSSでhiddenクラスは表示されないよう記述します --->
+        <div id="resultArea" class="resultArea hidden">
+          <!-- 画像自体を表示 -->
+          <div id="showPic" class="showPic"></div>
+        </div>
+    </div>
+    </label>
+  </div>
+
+
+  <div class="tab">
+    <div class=" switch Switch_o" id="Switch_o">Objectdata</div>
+    <div class="switch Switch_s" id="Switch_s">SafeSearch</div>
+  </div>
+
+
+  <div class="result objectdata" id="objectdata">
+    <!-- 画像分析結果を表示 -->
+    <table class="table_object">
+      <thead>
+        <tr>
+          <td>プロパティ名</td>
+          <td>値</td>
+        </tr>
+      </thead>
+      <!-- <tbody> -->
+        <!-- 必要に応じてデータをここに -->
+        
+        
+      <!-- </tbody> -->
+    </table>
+
+  </div>
+
+  <div class="result safesearch hidden" id="safesearch">
+    <!-- セーフサーチを表示 -->
+    <table class="table_safe">
+      <thead>
+        <tr>
+          <td>カテゴリ</td>
+          <td>危険度</td>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+    <!-- <meter id="resultMeter" min=0 max=100></meter> -->
+  </div>
+
+  <div class="footer">
+    <!-- フッターです -->
+  </div>
+
+
+  <template id="whatisgot">
+      <tr>
+        <td class="property_name"></td>
+        <td class="value_name"></td>
+      </tr>
+      <!-- <div id='bereplaced'></div> -->
+  </template>
+
+  <template id="safesearch_table">
+      <tr>
+        <td class="category_name"></td>
+        <meter id="safe_meter" value="" min="0" max="4"></meter>
+      </tr>
+  </template>
+
+  </div>
+
+  <script src="../../static/API/js/API.js"></script>
+  <script src="../../static/API/js/hide.js"></script>
+</body>
+
+</html>

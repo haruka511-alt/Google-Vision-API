@@ -1,0 +1,22 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+.venv/
+.vscode/
+.DS_Store
+__pycache__/
+db.sqlite3
+
+local_settings.py
+
+#js
+hide.js
